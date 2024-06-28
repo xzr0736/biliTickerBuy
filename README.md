@@ -69,6 +69,13 @@ Running on local URL:  http://127.0.0.1:xxx
 	<tbody>
 		<tr>
             <td align="center">
+                <a href="https://github.com/xzr0736">
+                    <img src="https://avatars.githubusercontent.com/u/104724797?v=4" width="100;" alt="xzr0736"/>
+                    <br />
+                    <sub><b>xzr0736</b></sub>
+                </a>
+            </td>
+            <td align="center">
                 <a href="https://github.com/mikumifa">
                     <img src="https://avatars.githubusercontent.com/u/99951454?v=4" width="100;" alt="mikumifa"/>
                     <br />
@@ -103,6 +110,8 @@ Running on local URL:  http://127.0.0.1:xxx
                     <sub><b>ZianTT</b></sub>
                 </a>
             </td>
+		</tr>
+		<tr>
             <td align="center">
                 <a href="https://github.com/BestLemoon">
                     <img src="https://avatars.githubusercontent.com/u/53417050?v=4" width="100;" alt="BestLemoon"/>
@@ -110,8 +119,6 @@ Running on local URL:  http://127.0.0.1:xxx
                     <sub><b>ChillWay</b></sub>
                 </a>
             </td>
-		</tr>
-		<tr>
             <td align="center">
                 <a href="https://github.com/ChisatoNishikigi73">
                     <img src="https://avatars.githubusercontent.com/u/89033115?v=4" width="100;" alt="ChisatoNishikigi73"/>
