@@ -1,8 +1,13 @@
+import argparse
+import os.path
+
 import gradio as gr
 from loguru import logger
 
+from config import get_application_path, BASE_DIR
 from tab.go import go_tab
 from tab.login import login_tab
+from tab.problems import problems_tab
 from tab.settings import setting_tab
 from tab.train import train_tab
 
@@ -26,18 +31,25 @@ custom_css = """
 """
 
 if __name__ == "__main__":
-    logger.add("app.log")
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--port", type=int, default=7860, help="server port")
+    parser.add_argument("--share", type=bool, default=False, help="create a public link")
+    args = parser.parse_args()
+    log_file = os.path.join(BASE_DIR, "app.log")
+    logger.add(log_file)
     with gr.Blocks(head=short_js, css=custom_css) as demo:
         gr.Markdown(header)
-        with gr.Tab("配置"):
+        with gr.Tab("生成配置"):
             setting_tab()
-        with gr.Tab("抢票"):
+        with gr.Tab("操作抢票"):
             go_tab()
-        with gr.Tab("训练你的验证码速度"):
+        with gr.Tab("过码测试"):
             train_tab()
         with gr.Tab("登录管理"):
             login_tab()
+        with gr.Tab("项目说明"):
+            problems_tab()
 
     # 运行应用
     print("点击下面的网址运行程序     ↓↓↓↓↓↓↓↓↓↓↓↓↓↓")
-    demo.launch(share=True)
+    demo.launch(share=args.share, inbrowser=True)
